@@ -10,5 +10,14 @@ dat_sub$datetime <- paste(dat_sub$Date, dat_sub$Time)
 dat_sub$datetime <- strptime(dat_sub$datetime, "%Y-%m-%d %H:%M:%S")
 
 dat_sub$Global_active_power <- as.numeric(dat_sub$Global_active_power)
+dat_sub$Sub_metering_1 <- as.numeric(dat_sub$Sub_metering_1)
+dat_sub$Sub_metering_2 <- as.numeric(dat_sub$Sub_metering_2)
+dat_sub$Sub_metering_3 <- as.numeric(dat_sub$Sub_metering_3)
 
-hist(dat_sub$Global_active_power, xlab="Global Active Power (kilowatts)", main="Global Active Power", col="red",bty="n")
+plot(dat_sub$datetime, dat_sub$Sub_metering_1, ylab="Energy sub metering", xlab="", type="l")
+with(dat_sub,{
+        lines(datetime,Sub_metering_1)
+        lines(datetime,Sub_metering_2,col="red")
+        lines(datetime,Sub_metering_3,col="blue")
+})
+legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),cex=.8)
