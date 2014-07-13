@@ -12,7 +12,7 @@ dat_sub$datetime <- strptime(dat_sub$datetime, "%Y-%m-%d %H:%M:%S")
 
 par(mfcol = c(2, 2),cex=.5)
 
-plot(dat_sub$datetime, dat_sub$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)",bty="n")
+plot(dat_sub$datetime, dat_sub$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 plot(dat_sub$datetime, dat_sub$Sub_metering_1, xlab="", ylab="Energy sub metering", type="l")
 with(dat_sub,{
