@@ -12,3 +12,5 @@ dat_sub$datetime <- strptime(dat_sub$datetime, "%Y-%m-%d %H:%M:%S")
 dat_sub$Global_active_power <- as.numeric(dat_sub$Global_active_power)
 
 plot(dat_sub$datetime, dat_sub$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+dev.copy(png, width = 480, height = 480, file = "plot2.png")
+dev.off()

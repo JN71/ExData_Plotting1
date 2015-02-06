@@ -12,3 +12,5 @@ dat_sub$datetime <- strptime(dat_sub$datetime, "%Y-%m-%d %H:%M:%S")
 dat_sub$Global_active_power <- as.numeric(dat_sub$Global_active_power)
 
 hist(dat_sub$Global_active_power, xlab="Global Active Power (kilowatts)", main="Global Active Power", col="red",bty="n")
+dev.copy(png, width = 480, height = 480, file = "plot1.png")
+dev.off()

@@ -20,8 +20,10 @@ with(dat_sub,{
         lines(datetime,Sub_metering_2,col="red")
         lines(datetime,Sub_metering_3,col="blue")
 })
-legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=1, col=c("black","red","blue"))
 
 plot(dat_sub$datetime, dat_sub$Voltage, type="l", ylab="Voltage", xlab="datetime")
 
 plot(dat_sub$datetime, dat_sub$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime")
+dev.copy(png, width = 480, height = 480, file = "plot4.png")
+dev.off()
