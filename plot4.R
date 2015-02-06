@@ -20,7 +20,7 @@ with(dat_sub,{
         lines(datetime,Sub_metering_2,col="red")
         lines(datetime,Sub_metering_3,col="blue")
 })
-legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=1, col=c("black","red","blue"))
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=1, col=c("black","red","blue"), cex=.8)
 
 plot(dat_sub$datetime, dat_sub$Voltage, type="l", ylab="Voltage", xlab="datetime")
 
